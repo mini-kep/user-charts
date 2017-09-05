@@ -1,16 +1,15 @@
 # mini-kep-chart
 Charts based on 'mini-kep' macroeconomic dataset
 
-TODO
-====
+## TODO
 
-- interface.r
-- interface.py
-- quandl.py
-- fred.py
+Add interface examples:
+- [ ] interface.r (based on src/getter.py)
+- [ ] interface.py
+- [ ] quandl.py
+- [ ] fred.py
 
-Chart ideas
-===========
+## Chart ideas
 
 - retail time series
 - BoR inflation 
