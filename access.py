@@ -19,6 +19,7 @@ def get_ts(freq, name):
     url = make_url(freq, name)
     return read_from_url(url)
 
+
 def get_df(freq, *names):
     df_list = [get_ts(freq, name).to_frame() for name in names]
     df = df_list[0]
@@ -26,6 +27,7 @@ def get_df(freq, *names):
 	# inner join, restrictive if you do not have some data, can change to outer
         df = df.merge(right_df, right_index=True, left_index=True)
     return df  
+
 
 if __name__ == '__main__':
     ts = get_df('a', 'GDP_yoy') 	
