@@ -7,10 +7,6 @@
  'm': {'len': 7131, 'ts': 33},
  'q': {'len': 2515, 'ts': 35}}
 
-NOT IMPLEMENTED:
-
-   - map of dataset (start and end dates oa grid)    
-
 """
 
 import requests 
