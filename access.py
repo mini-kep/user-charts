@@ -40,10 +40,15 @@ def get_df(freq):
     return get_df_by_names(freq, names)
 
 if __name__ == '__main__':
+    # get variable list for frequency 'q' (quarterly)
     variable_names_quarterly = get_names('q')
+    # read one variable as pd.Series
     ts = get_ts('q', 'GDP_yoy')
+    # read all variables for frequency 'q' as pd.DataFrame 
+    # runs about 20-40 sec
     dfq = get_df('q')    
-    print(dfq.columns)
+    # check dataframe columns are exaactly the ones we retrieved earlier
+    assert variable_names_quarterly == dfq.columns.tolist()    
     
 #        Index(['CPI_ALCOHOL_rog', 'CPI_FOOD_rog', 'CPI_NONFOOD_rog', 'CPI_rog',
 #               'CPI_SERVICES_rog', 'EXPORT_GOODS_bln_usd', 'GDP_bln_rub', 'GDP_yoy',
@@ -63,3 +68,7 @@ if __name__ == '__main__':
 #               'TRANSPORT_FREIGHT_bln_tkm', 'UNEMPL_pct', 'WAGE_NOMINAL_rub',
 #               'WAGE_REAL_rog', 'WAGE_REAL_yoy'],
 #              dtype='object')
+
+    # can also get monthly data
+    # commented because it slows down code, uncomment if you need monthly data
+    # dfm = get_df('m')    
