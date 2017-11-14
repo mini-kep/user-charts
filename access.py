@@ -39,6 +39,8 @@ def get_df(freq):
     names = get_names(freq)
     return get_df_by_names(freq, names)
 
+# TODO: save data in csv file as backups, similar as kep parser does it. 
+
 if __name__ == '__main__':
     # get variable list for frequency 'q' (quarterly)
     variable_names_quarterly = get_names('q')
@@ -50,25 +52,6 @@ if __name__ == '__main__':
     # check dataframe columns are exaactly the ones we retrieved earlier
     assert variable_names_quarterly == dfq.columns.tolist()    
     
-#        Index(['CPI_ALCOHOL_rog', 'CPI_FOOD_rog', 'CPI_NONFOOD_rog', 'CPI_rog',
-#               'CPI_SERVICES_rog', 'EXPORT_GOODS_bln_usd', 'GDP_bln_rub', 'GDP_yoy',
-#               'GOV_EXPENSE_ACCUM_CONSOLIDATED_bln_rub',
-#               'GOV_EXPENSE_ACCUM_FEDERAL_bln_rub',
-#               'GOV_EXPENSE_ACCUM_SUBFEDERAL_bln_rub',
-#               'GOV_REVENUE_ACCUM_CONSOLIDATED_bln_rub',
-#               'GOV_REVENUE_ACCUM_FEDERAL_bln_rub',
-#               'GOV_REVENUE_ACCUM_SUBFEDERAL_bln_rub',
-#               'GOV_SURPLUS_ACCUM_FEDERAL_bln_rub',
-#               'GOV_SURPLUS_ACCUM_SUBFEDERAL_bln_rub', 'IMPORT_GOODS_bln_usd',
-#               'INDPRO_rog', 'INDPRO_yoy', 'INVESTMENT_bln_rub', 'INVESTMENT_rog',
-#               'INVESTMENT_yoy', 'RETAIL_SALES_bln_rub', 'RETAIL_SALES_FOOD_bln_rub',
-#               'RETAIL_SALES_FOOD_rog', 'RETAIL_SALES_FOOD_yoy',
-#               'RETAIL_SALES_NONFOOD_bln_rub', 'RETAIL_SALES_NONFOOD_rog',
-#               'RETAIL_SALES_NONFOOD_yoy', 'RETAIL_SALES_rog', 'RETAIL_SALES_yoy',
-#               'TRANSPORT_FREIGHT_bln_tkm', 'UNEMPL_pct', 'WAGE_NOMINAL_rub',
-#               'WAGE_REAL_rog', 'WAGE_REAL_yoy'],
-#              dtype='object')
-
     # can also get monthly data
     # commented because it slows down code, uncomment if you need monthly data
     # dfm = get_df('m')    
