@@ -10,18 +10,14 @@ Charts based on 'mini-kep' macroeconomic dataset
 
 ## Chart ideas
 
-One-chart illustrations:
-
+- [comovement table](https://github.com/mini-kep/user-charts/issues/6)
 - retail time series (started)
 - BoR inflation (as in link)
-- GDP components (got sample)
-- fx: oil vs rouble (got sample)
+- GDP components (datachart.cc)
+- fx: oil vs rouble (datachart.cc)
 - bank provisions
 - splinechart data map for the whole dataset
 
-## Replicate results
-
-- <https://github.com/epogrebnyak/cmf-comovement-tables>
 
 ## Repositories
 
@@ -32,4 +28,3 @@ Other repositories to borrow code from (need cleanup):
 - <http://datachart.cc/>
 - <https://github.com/epogrebnyak/data-fx-oil>
 - <https://github.com/epogrebnyak/viz_demo>
-
