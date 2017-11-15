@@ -58,7 +58,10 @@ def save_local(freq):
 
 def get_df_local(freq):  
     path = make_filename(freq)
-    return read_df(path)
+    try:
+       return read_df(path)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"No data file: {path}")        
     
 if __name__ == '__main__':
     # get variable list for frequency 'q' (quarterly)
@@ -78,7 +81,10 @@ if __name__ == '__main__':
     start = time()
     for freq in 'aqmd':
         save_local(freq) 
-    # reading a local version
     print("Read full dataset:", round(time() - start, 1), "sec")
     
+    # reading a local version  
+    dfa = get_df_local('a')
+    
+    # TODO: compare time for series / frame query
     
